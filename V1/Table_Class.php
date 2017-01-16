@@ -3,7 +3,7 @@ class DemandeTable{
 
 	function getAllDemande(){
 		$listDemande = array();
-		$con = new ConnectionDB().getCon();
+		$con = new ConnectionDB().getConn();
 		$req = "SELECT * FROM demande";
 		$result = $con->query($req);
 		while($e = mysqli_fetch_array($result)) {
@@ -22,7 +22,7 @@ class EmployeTable{
 
 	function getAllEmploye(){
 		$listEmploye = array();
-		$con = new ConnectionDB().getCon();
+		$con = new ConnectionDB().getConn();
 		$req = "SELECT * FROM empoloye";
 		$result = $con->query($req);
 		while($e = mysqli_fetch_array($result)) {
@@ -45,7 +45,7 @@ class InterventionTable{
 
 	function getAllIntervention(){
 		$listIntervention = array();
-		$con = new ConnectionDB().getCon();
+		$con = new ConnectionDB().getConn();
 		$req = "SELECT * FROM intervention";
 		$result = $con->query($req);
 		while($e = mysqli_fetch_array($result)) {
@@ -64,7 +64,7 @@ class MarqueTable{
 
 	function getAllMarque(){
 		$listMarque = array();
-		$con = new ConnectionDB().getCon();
+		$con = new ConnectionDB().getConn();
 		$req = "SELECT * FROM marque";
 		$result = $con->query($req);
 		while($e = mysqli_fetch_array($result)) {
@@ -81,7 +81,7 @@ class MaterielTable{
 
 	function getAllMateriel(){
 		$listMateriel = array();
-		$con = new ConnectionDB().getCon();
+		$con = new ConnectionDB().getConn();
 		$req = "SELECT * FROM materiel";
 		$result = $con->query($req);
 		while($e = mysqli_fetch_array($result)) {
@@ -103,7 +103,7 @@ class ServiceTable{
 
 	function getAllService(){
 		$listService = array();
-		$con = new ConnectionDB().getCon();
+		$con = new ConnectionDB().getConn();
 		$req = "SELECT * FROM service";
 		$result = $con->query($req);
 		while($e = mysqli_fetch_array($result)) {
@@ -120,7 +120,7 @@ class TypeLoginTable{
 
 	function getAllTypeLogin(){
 		$listTypeLogin = array();
-		$con = new ConnectionDB().getCon();
+		$con = new ConnectionDB().getConn();
 		$req = "SELECT * FROM type_login";
 		$result = $con->query($req);
 		while($e = mysqli_fetch_array($result)) {
@@ -138,7 +138,7 @@ class TypeMatTable{
 
 	function getAllTypeMat(){
 		$listTypeMat = array();
-		$con = new ConnectionDB().getCon();
+		$con = new ConnectionDB().getConn();
 		$req = "SELECT * FROM type_mat";
 		$result = $con->query($req);
 		while($e = mysqli_fetch_array($result)) {
@@ -147,7 +147,6 @@ class TypeMatTable{
 								$e['nomTypeMat']					
 							);
 			$listTypeMat->add($emp); }
-
 		return $this->$listTypeMat; }
 }
 
